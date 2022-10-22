@@ -10,7 +10,7 @@ import {
     MediumCard,
     LargeCard,
     Footer,
-} from "../components/index";
+} from "../components";
 
 interface Props {
     exploreData: any;
