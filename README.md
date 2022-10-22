@@ -17,7 +17,9 @@ A clone of Airbnb. Airbnb (ABNB) is an online marketplace that connects people w
 ## Deployment Status
 
 [![Deployed in Vercel](https://vercel.com/button)](https://airbnb-clone-build-chinmayakain.vercel.app/)
-Deployed trough vercel.
+<div>
+<p>Deployed trough vercel.<p>
+</div>
 
 ## Getting Started
 
