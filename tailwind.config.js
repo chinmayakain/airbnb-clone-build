@@ -10,7 +10,13 @@ module.exports = {
         './public/**/*.html',
     ],
     theme: {
-        extend: {},
+        extend: {
+            fontFamily: {
+                "airbnb-cereal": ["AirbnbCereal"],
+            },
+        },
     },
-    plugins: [],
+    plugins: [
+        require('tailwind-scrollbar-hide')
+    ],
 }
