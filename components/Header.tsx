@@ -24,7 +24,7 @@ const Header = (props: Props) => {
 
             <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
                 <input
-                    className="border-none flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400 order-transparent focus:border-transparent focus:ring-0"
+                    className="border-none outline-none mx-3 flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400 order-transparent focus:border-transparent focus:ring-0"
                     type="text"
                     placeholder="Start your search"
                 />
