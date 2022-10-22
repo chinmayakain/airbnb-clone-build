@@ -2,9 +2,6 @@
 const withFonts = require("next-fonts");
 module.exports = withFonts({
     webpack(config, options) {
-        config.node = {
-            fs: "empty",
-        };
         config.module.rules.push({
             test: /\.(png|woff|woff2|eot|ttf|svg)$/,
             use: [
