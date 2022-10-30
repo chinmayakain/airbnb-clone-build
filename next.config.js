@@ -18,6 +18,6 @@ module.exports = withFonts({
     },
     reactStrictMode: true,
     images: {
-        domains: ["www.jetsetter.com"],
+        domains: ["images.pexels.com", "www.jetsetter.com"],
     },
 });
