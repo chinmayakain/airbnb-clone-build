@@ -10,9 +10,11 @@ import {
     UsersIcon,
 } from "@heroicons/react/24/solid";
 
-type Props = {};
+interface Props {
+    placeholder: string;
+}
 
-const Header = (props: Props) => {
+const Header = ({ placeholder }: Props) => {
     const [searchInput, setSearchInput] = useState("");
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
@@ -62,7 +64,7 @@ const Header = (props: Props) => {
                     onChange={(event) => setSearchInput(event.target.value)}
                     className="border-none outline-none mx-3 flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400 order-transparent focus:border-transparent focus:ring-0"
                     type="text"
-                    placeholder="Start your search"
+                    placeholder={placeholder || "Start your search"}
                 />
                 <MagnifyingGlassIcon className="hidden md:inline-flex h-8 p-2 cursor-pointer bg-red-400 text-white rounded-full md:mx-2" />
             </div>
