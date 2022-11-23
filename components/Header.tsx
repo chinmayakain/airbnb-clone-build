@@ -10,6 +10,8 @@ import {
     UsersIcon,
 } from "@heroicons/react/24/solid";
 
+import * as ga from "../lib/ga"
+
 interface Props {
     placeholder: string;
 }
@@ -19,7 +21,17 @@ const Header = ({ placeholder }: Props) => {
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
     const [numberOfGuests, setNumberOfGuests] = useState(1);
+    const [query, setQuery] = useState("");
     const router = useRouter();
+
+    const search = () => {
+        ga.event({
+          action: "search",
+          params : {
+            search_term: query
+          }
+        })
+      }
 
     const selectionRange = {
         startDate: startDate,
@@ -33,6 +45,7 @@ const Header = ({ placeholder }: Props) => {
     };
 
     const handleSearch = () => {
+        search()
         router.push({
             pathname: "/search",
             query: {
@@ -61,7 +74,7 @@ const Header = ({ placeholder }: Props) => {
             <div className="flex items-center md:border-2 rounded-full py-2 md:shadow-sm">
                 <input
                     value={searchInput}
-                    onChange={(event) => setSearchInput(event.target.value)}
+                    onChange={(event) => {setSearchInput(event.target.value), setQuery(event.target.value)}}
                     className="border-none outline-none mx-3 flex-grow pl-5 bg-transparent text-sm text-gray-600 placeholder-gray-400 order-transparent focus:border-transparent focus:ring-0"
                     type="text"
                     placeholder={placeholder || "Start your search"}
