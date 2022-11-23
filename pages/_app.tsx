@@ -25,7 +25,7 @@ Router.events.on("routeChangeError", progress.finish);
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <>
-            <GoogleAnalytics trackPageViews={{ ignoreHashChange: true }} />
+            <GoogleAnalytics trackPageViews />
             <Component {...pageProps} />
         </>
     );
