@@ -7,6 +7,7 @@ import "react-date-range/dist/theme/default.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import "../styles/globals.css";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 /* progress indicator **/
 const progress = new ProgressBar({
@@ -22,7 +23,12 @@ Router.events.on("routeChangeComplete", progress.finish);
 Router.events.on("routeChangeError", progress.finish);
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />;
+    return (
+        <>
+            <GoogleAnalytics trackPageViews={{ ignoreHashChange: true }} />
+            <Component {...pageProps} />
+        </>
+    );
 }
 
 export default MyApp;
