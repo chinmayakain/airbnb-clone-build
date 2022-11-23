@@ -44,6 +44,12 @@ const Header = ({ placeholder }: Props) => {
         });
     };
 
+    const handleHost = () => {
+        router.push({
+            pathname: "/become-a-host",
+        });
+    }
+
     return (
         <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
             <div
@@ -70,10 +76,10 @@ const Header = ({ placeholder }: Props) => {
             </div>
 
             <div className="flex items-center space-x-4 justify-end text-gray-500 ">
-                <p className="hidden md:inline cursor-pointer p-2 rounded-full hover:bg-gray-100 hover:shadow-sm">
+                <p onClick={() => handleHost()} className="hidden md:inline cursor-pointer p-2 rounded-full hover:bg-gray-100 hover:shadow-sm select-none">
                     Become a host
                 </p>
-                <GlobeAltIcon className="h-6 cursor-pointer rounded-full hover:bg-gray-100 hover:shadow-sm" />
+                <GlobeAltIcon onClick={() => handleHost()} className="h-6 cursor-pointer rounded-full hover:bg-gray-100 hover:shadow-sm select-none" />
                 <div className="flex items-center space-x-2 border-2 p-2 rounded-full cursor-pointer hover:scale-110 transition:transform duration-200 ease-out">
                     <Bars3Icon className="h-6 " />
                     <UserCircleIcon className="h-6" />
