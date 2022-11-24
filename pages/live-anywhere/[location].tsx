@@ -6,7 +6,7 @@ interface Props {
 }
 
 const Location = ({ images }: Props) => {
-    console.log("--props", images);
+    
     return (
         <div >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xlg:grid-cols-4">
