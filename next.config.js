@@ -24,6 +24,7 @@ module.exports = withFonts({
             "www.jetsetter.com",
             "www.jsonkeeper.com",
             "links.papareact.com",
+            "www.pexels.com"
         ],
     },
     publicRuntimeConfig: {

@@ -5,18 +5,16 @@ import data from "../constants/exploreNearby";
 import liveData from "../constants/liveAnywhere";
 import {
     Banner,
-    Header,
     SmallCard,
     MediumCard,
-    LargeCard,
-    Footer,
+    LargeCard
 } from "../components";
 
-interface Props {
+interface props {
     exploreData: any;
 }
 
-const Home: NextPage = (props) => {
+const Home: NextPage = (props: any) => {
     return (
         <div className="font-family:airbnb-cereal">
             <Head>
@@ -29,8 +27,6 @@ const Home: NextPage = (props) => {
                     crossOrigin=""
                 />
             </Head>
-
-            <Header placeholder="" />
             <Banner />
             <main className="font-family:AirbnbCereal max-w-7xl mx-auto px-8 sm:px-16">
                 <section className="pt-6">
@@ -39,12 +35,13 @@ const Home: NextPage = (props) => {
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xlg:grid-cols-4">
-                        {data?.map(({ img, location, distance }) => (
+                        {data?.map(({ img, location, distance, url }) => (
                             <SmallCard
                                 key={img}
                                 img={img}
                                 location={location}
                                 distance={distance}
+                                url={url}
                             />
                         ))}
                     </div>
@@ -68,20 +65,10 @@ const Home: NextPage = (props) => {
                     />
                 </section>
             </main>
-            <Footer />
         </div>
     );
 };
 
-export async function getStaticProps() {
-    // const exploreData = await fetch("").then((res) => res.json);
-    // const liveAnywhereData = await fetch("").then((res) => res.json);
 
-    return {
-        props: {
-            // exploreData,
-        },
-    };
-}
 
 export default Home;
