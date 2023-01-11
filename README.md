@@ -12,8 +12,7 @@
 
 <kbd> ![App Screenshot](https://user-images.githubusercontent.com/52573685/211854671-5de8be06-1d78-4402-827e-3d2ee679095a.PNG) </kbd>
 
-</br>
-
+----
 
 <kbd> ![App Screenshot 2](https://user-images.githubusercontent.com/52573685/211855070-57be3083-d05d-4c02-a56a-e71fbd38e311.PNG) </kbd>
 
